@@ -21,7 +21,7 @@ export default defineConfig({
     }
   } 
  
-})*/
+})nm */
  'react-pdf': 'react-pdf/dist/esm/entry.webpack.js',
 server: {
   host: '0.0.0.0',
