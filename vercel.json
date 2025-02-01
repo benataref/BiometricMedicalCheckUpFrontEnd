@@ -6,7 +6,10 @@
     ],
 
   
-  
+  "engines": {
+  "node": "16.x"
+},
+
     "build": {
       "env": {
         "NODE_VERSION": "20"
