@@ -1,18 +1,14 @@
 {
-    "rewrites": [
+    "builds": [
       {
-        "source": "/(.*)",
-        "destination": "/"
+        "src": "package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "dist" }
       }
     ],
-    
-    "build": {
-        "command": "apt-get install -y libpixman-1-dev && npm install",
-
-      "env": {
-        "NODE_VERSION": "16.x"  
-      }
-    }
-    
+    "routes": [
+      { "src": "/(.*)", "dest": "/index.html" }
+    ]
   }
+  
   
