@@ -5,10 +5,14 @@
         "destination": "/"
       }
     ],
+    
     "build": {
+        "command": "apt-get install -y libpixman-1-dev && npm install",
+
       "env": {
         "NODE_VERSION": "16.x"  
       }
     }
+    
   }
   
