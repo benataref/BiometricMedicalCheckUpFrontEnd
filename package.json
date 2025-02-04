@@ -22,6 +22,7 @@
     "cordova-plugin-fp-secugen": "^0.1.14",
     "jquery": "^3.7.1",
     "moment": "^2.30.1",
+    "npm-force-resolutions": "^0.0.10",
     "pagination-react-js": "^2.0.1",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^3.0.279",
