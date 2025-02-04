@@ -45,7 +45,7 @@ export default function Update({ handleOnSubmit, value, handlechange }) {
                                     <label>Photo</label>
                                     <div>
                                        
-                                 <img src={`http://localhost:8000/${value.photo}`} alt="Fetched" style={{ width: '100%', height: 'auto' }} />
+                                 <img src={`https://biometric-medical-check-up-front-end.vercel.app/${value.photo}`} alt="Fetched" style={{ width: '100%', height: 'auto' }} />
                                
                                     </div>
                                 </div>

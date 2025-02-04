@@ -11,7 +11,7 @@ const PatientProfile = () => {
   useEffect(() => {
     const fetchDropdownOptions = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/patient/get');
+        const response = await axios.get('https://biometric-medical-check-up-front-end.vercel.app/api/patient/get');
         const options = Array.isArray(response.data)
           ? response.data.map(option => ({
               value: option._id,
@@ -31,7 +31,7 @@ const PatientProfile = () => {
     if (patientId) {
       const fetchPatientData = async () => {
         try {
-          const response = await axios.get(`http://localhost:8000/api/patient/get/${patientId}`);
+          const response = await axios.get(`https://biometric-medical-check-up-front-end.vercel.app/api/patient/get/${patientId}`);
           setPatientData(response.data);
         } catch (error) {
           console.error('Error fetching patient data', error);
@@ -49,7 +49,7 @@ const PatientProfile = () => {
 
   const handleExe = async () => {
     try {
-      await axios.get('http://localhost:8000/api/patient/exeV');
+      await axios.get('https://biometric-medical-check-up-front-end.vercel.app/api/patient/exeV');
       // Handle success if needed
     } catch (error) {
       console.error('Error executing verification:', error);
@@ -82,7 +82,7 @@ const PatientProfile = () => {
         {patientData && (
           <div className="patient-data">
             <img 
-              src={`http://localhost:8000/${patientData.photo}`} 
+              src={`https://biometric-medical-check-up-front-end.vercel.app/${patientData.photo}`} 
               alt="Patient" 
               className="patient-photo"
               style={{ width: '25%', height: 'auto' }} 

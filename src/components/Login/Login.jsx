@@ -87,7 +87,7 @@ const Login = ({ onLogin }) => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/api/login/login', {
+      const response = await axios.post('https://biometric-medical-check-up-front-end.vercel.app/api/login/login', {
         email,
         password,
       });

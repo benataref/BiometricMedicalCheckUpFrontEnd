@@ -78,7 +78,7 @@ export default function Table({ Deletuser, UpdatedUser }) {
     useEffect(()=>{
         const fetchdata = async () => {
             try {
-                const result = await axios.get("http://localhost:8000/api/patient/get");
+                const result = await axios.get("https://biometric-medical-check-up-front-end.vercel.app/api/patient/get");
                 setdata(result.data);
                 
                 setFilteredData(result.data); // Set both states initially
@@ -97,7 +97,7 @@ export default function Table({ Deletuser, UpdatedUser }) {
         setFilteredData(newData);
     };
      const handleexe=()=>{
-        axios.get('http://localhost:8000/api/patient/exe')
+        axios.get('https://biometric-medical-check-up-front-end.vercel.app/api/patient/exe')
     }; 
     return (
         <>

@@ -39,7 +39,7 @@ export default function Patient() {
     });
     useEffect(() => {
         if (updatedUserId) {
-            axios.get(`http://localhost:8000/api/patient/get/${updatedUserId}`)
+            axios.get(`https://biometric-medical-check-up-front-end.vercel.app/api/patient/get/${updatedUserId}`)
                 .then(result => {
                     setValue({
                         photo:result.data.photo,
@@ -74,7 +74,7 @@ export default function Patient() {
     }
     const handleUserDelet = async () => {
         try {
-            const DeletUser = await axios.delete(`http://localhost:8000/api/patient/delete/${userId}`)
+            const DeletUser = await axios.delete(`https://biometric-medical-check-up-front-end.vercel.app/api/patient/delete/${userId}`)
             const response = DeletUser.data
             if (response.success) {
                 toast.success(response.message)
@@ -102,7 +102,7 @@ export default function Patient() {
         e.preventDefault();
     
         try {
-            const UpdatedUser = await axios.put(`http://localhost:8000/api/patient/update/${updatedUserId}`,value)
+            const UpdatedUser = await axios.put(`https://biometric-medical-check-up-front-end.vercel.app/api/patient/update/${updatedUserId}`,value)
             const response = UpdatedUser.data
 
             if (response.success) {
