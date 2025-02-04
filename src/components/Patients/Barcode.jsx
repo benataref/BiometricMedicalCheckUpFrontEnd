@@ -12,7 +12,7 @@ const PatientBarcode = () => {
   // Function to fetch patient data when patientId changes
   const fetchPatientData = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/patient/get/${patientId}`);
+      const response = await axios.get(`https://biometric-medical-check-up-front-end.vercel.app/api/patient/get/${patientId}`);
       setPatientData(response.data);
       setBarcodeValue(response.data.passPort); // Assuming passPort is the value for the barcode
     } catch (err) {
@@ -87,7 +87,7 @@ const PatientBarcode = () => {
         {patientData && (
           <div className="patient-data">
             <img 
-              src={`http://localhost:8000/${patientData.photo}`} 
+              src={`https://biometric-medical-check-up-front-end.vercel.app/${patientData.photo}`} 
               alt="Patient" 
               className="patient-photo"
               style={{ width: '25%', height: 'auto' }} 

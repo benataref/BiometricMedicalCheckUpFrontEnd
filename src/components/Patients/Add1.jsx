@@ -94,7 +94,7 @@ export default function Add1() {
                 formData.append(key, val);
             }
     
-            const response = await axios.post('http://localhost:8000/api/patient/create1', formData, {
+            const response = await axios.post('https://biometric-medical-check-up-front-end.vercel.app/api/patient/create1', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
