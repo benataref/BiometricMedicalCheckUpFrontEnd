@@ -28,7 +28,7 @@ export default function Update({ handleOnSubmit, value, handlechange }) {
                                     <label>Result File</label>
                                     <div style={{ width: '200%', height: '40vh' }}>
   <iframe
-    src={`http://localhost:8000/${value.file}`}
+    src={`https://biometric-medical-check-up-backend.vercel.app/${value.file}`}
     title="PDF Viewer"
     style={{ width: '100%', height: '100%', border: 'none' }}
   />

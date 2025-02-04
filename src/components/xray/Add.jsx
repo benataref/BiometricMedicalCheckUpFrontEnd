@@ -22,7 +22,7 @@ export default function Add() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/patient/get');
+                const response = await axios.get('https://biometric-medical-check-up-backend.vercel.app/api/patient/get');
                 console.log(response.data); 
                 const options = Array.isArray(response.data)
                     ? response.data.map(option => ({
@@ -59,7 +59,7 @@ export default function Add() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:8000/api/xray/create', value);
+            const response = await axios.post('https://biometric-medical-check-up-backend.vercel.app/api/xray/create', value);
             if (response.data.success) {
                 toast.success(response.data.Message);
                 CloseRef.current.click();

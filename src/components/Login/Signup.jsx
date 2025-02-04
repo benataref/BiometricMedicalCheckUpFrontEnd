@@ -12,7 +12,7 @@ function Signup () {
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://192.168.1.9:8000/api/login/register', { name, fathername, email, password })
+        axios.post('https://biometric-medical-check-up-front-end.vercel.app/api/login/register', { name, fathername, email, password })
           .then(response => {
             console.log(response);
             // Redirect to another page after successful signup

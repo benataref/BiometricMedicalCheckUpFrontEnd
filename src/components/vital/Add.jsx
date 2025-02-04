@@ -79,7 +79,7 @@ export default function Add() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/patient/get');
+                const response = await axios.get('https://biometric-medical-check-up-front-end.vercel.app/api/patient/get');
                 console.log(response.data); // Check what data you receive
                 // Check if the response.data is an array or object containing the array
                 const options = Array.isArray(response.data)
@@ -121,7 +121,7 @@ export default function Add() {
         e.preventDefault();
 
         try {
-            const adduser = await axios.post('http://localhost:8000/api/vital/create', value)
+            const adduser = await axios.post('https://biometric-medical-check-up-front-end.vercel.app/api/vital/create', value)
             const response = adduser.data
             if (response.success) {
                 toast.success(response.Message)

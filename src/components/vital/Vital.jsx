@@ -86,7 +86,7 @@ export default function Vital() {
     
         useEffect(() => {
             if (updatedUserId) {
-                axios.get(`http://localhost:8000/api/vital/get/${updatedUserId}`)
+                axios.get(`https://biometric-medical-check-up-backend.vercel.app/api/vital/get/${updatedUserId}`)
                     .then(result => {
                         setValue({
                             
@@ -164,7 +164,7 @@ export default function Vital() {
     }
     const handleUserDelet = async () => {
         try {
-            const DeletUser = await axios.delete(`http://localhost:8000/api/vital/delete/${userId}`)
+            const DeletUser = await axios.delete(`https://biometric-medical-check-up-backend.vercel.app/api/vital/delete/${userId}`)
             const response = DeletUser.data
             if (response.success) {
                 toast.success(response.message)
@@ -193,7 +193,7 @@ export default function Vital() {
         e.preventDefault();
     
         try {
-            const UpdatedUser = await axios.put(`http://localhost:8000/api/vital/update/${updatedUserId}`,value)
+            const UpdatedUser = await axios.put(`https://biometric-medical-check-up-backend.vercel.app/api/vital/update/${updatedUserId}`,value)
             const response = UpdatedUser.data
 
             if (response.success) {

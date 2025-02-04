@@ -54,8 +54,8 @@ export default function CombinedTable({ Deletuser, UpdatedUser }) {
         const fetchData = async () => {
             try {
                 const [patientResult, LabResult] = await Promise.all([
-                    axios.get("http://localhost:8000/api/patient/get"),
-                    axios.get("http://localhost:8000/api/labresult/get")
+                    axios.get("https://biometric-medical-check-up-backend.vercel.app/api/patient/get"),
+                    axios.get("https://biometric-medical-check-up-backend.vercel.app/api/labresult/get")
                 ]);
                 console.log('Patient Result:', patientResult);
                 console.log('labresult Result:', LabResult);

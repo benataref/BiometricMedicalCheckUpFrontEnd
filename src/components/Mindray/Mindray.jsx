@@ -21,7 +21,7 @@ export default function Mindray() {
     });
     useEffect(() => {
         if (updatedUserId) {
-            axios.get(`http://192.168.1.9:8000/api/Mindray/get/${updatedUserId}`)
+            axios.get(`https://biometric-medical-check-up-backend.vercel.app/api/Mindray/get/${updatedUserId}`)
                 .then(result => {
                     setValue({
                         pid:result.data.pid,
@@ -38,7 +38,7 @@ export default function Mindray() {
     }
     const handleUserDelet = async () => {
         try {
-            const DeletUser = await axios.delete(`http://192.168.1.9:8000/api/Patients/delete/${userId}`)
+            const DeletUser = await axios.delete(`https://biometric-medical-check-up-backend.vercel.app/api/Patients/delete/${userId}`)
             const response = DeletUser.data
             if (response.success) {
                 toast.success(response.message)
@@ -66,7 +66,7 @@ export default function Mindray() {
         e.preventDefault();
     
         try {
-            const UpdatedUser = await axios.put(`http://192.168.1.9:8000/api/Mindray/update/${updatedUserId}`,value)
+            const UpdatedUser = await axios.put(`https://biometric-medical-check-up-backend.vercel.app/api/Mindray/update/${updatedUserId}`,value)
             const response = UpdatedUser.data
 
             if (response.success) {

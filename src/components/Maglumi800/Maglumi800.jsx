@@ -21,7 +21,7 @@ export default function Maglumi800() {
     });
     useEffect(() => {
         if (updatedUserId) {
-            axios.get(`http://localhost:8000/api/maglumi800/get/${updatedUserId}`)
+            axios.get(`https://biometric-medical-check-up-backend.vercel.app/api/maglumi800/get/${updatedUserId}`)
                 .then(result => {
                     setValue({
                         pid:result.data.pid,

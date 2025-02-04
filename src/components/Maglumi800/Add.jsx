@@ -39,7 +39,7 @@ export default function Add() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/patient/get');
+        const response = await axios.get('https://biometric-medical-check-up-backend.vercel.app/api/patient/get');
         const options = Array.isArray(response.data)
           ? response.data.map(option => ({
               value: option._id,
@@ -93,7 +93,7 @@ export default function Add() {
         formData.append(key, val);
       }
 
-      const response = await axios.post('http://localhost:8000/api/maglumi800/create1', formData, {
+      const response = await axios.post('https://biometric-medical-check-up-backend.vercel.app/api/maglumi800/create1', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
