@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "vercel-build": "apt-get update && apt-get install -y libpixman-1-dev && npm run build",
-   "postinstall": "apt-get install -y libpixman-1-dev"
+    "postinstall": "echo 'Skipping Linux-specific dependencies in Vercel'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
